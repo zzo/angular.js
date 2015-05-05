@@ -28,13 +28,11 @@ mkdir sauce-connect
 tar --extract --file=$CONNECT_DOWNLOAD --strip-components=1 --directory=sauce-connect > /dev/null
 rm $CONNECT_DOWNLOAD
 
-#SAUCE_ACCESS_KEY=`echo $SAUCE_ACCESS_KEY | rev`
-#
-#    - SAUCE_USERNAME=angular-ci
-#        - SAUCE_ACCESS_KEY=9b988f434ff8-fbca-8aa4-4ae3-35442987
-
+SAUCE_ACCESS_KEY=`echo $SAUCE_ACCESS_KEY | rev`
 
 ARGS=""
+
+TRAVIS_JOB_NUMBER=$RANDOM
 
 # Set tunnel-id only on Travis, to make local testing easier.
 if [ ! -z "$TRAVIS_JOB_NUMBER" ]; then
@@ -44,6 +42,10 @@ if [ ! -z "$BROWSER_PROVIDER_READY_FILE" ]; then
   ARGS="$ARGS --readyfile $BROWSER_PROVIDER_READY_FILE"
 fi
 
+echo sauce stuff
+echo $SAUCE_ACCESS_KEY
+echo $SAUCE_USERNAME
+echo $ARGS
 
 echo "Starting Sauce Connect in the background, logging into:"
 echo "  $CONNECT_LOG"
