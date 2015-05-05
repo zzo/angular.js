@@ -29,6 +29,9 @@ tar --extract --file=$CONNECT_DOWNLOAD --strip-components=1 --directory=sauce-co
 rm $CONNECT_DOWNLOAD
 
 #SAUCE_ACCESS_KEY=`echo $SAUCE_ACCESS_KEY | rev`
+#
+#    - SAUCE_USERNAME=angular-ci
+#        - SAUCE_ACCESS_KEY=9b988f434ff8-fbca-8aa4-4ae3-35442987
 
 
 ARGS=""
