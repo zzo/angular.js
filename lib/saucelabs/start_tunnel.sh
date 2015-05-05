@@ -32,8 +32,6 @@ SAUCE_ACCESS_KEY=`echo $SAUCE_ACCESS_KEY | rev`
 
 ARGS=""
 
-TRAVIS_JOB_NUMBER=$RANDOM
-
 # Set tunnel-id only on Travis, to make local testing easier.
 if [ ! -z "$TRAVIS_JOB_NUMBER" ]; then
   ARGS="$ARGS --tunnel-identifier $TRAVIS_JOB_NUMBER"
