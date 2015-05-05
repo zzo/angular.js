@@ -1,6 +1,7 @@
 'use strict';
 
 //test
+//test
 var angularFiles = require('./angularFiles');
 var sharedConfig = require('./karma-shared.conf');
 
