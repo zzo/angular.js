@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#zot
 LOG_FILES=$LOGS_DIR/*
 
 for FILE in $LOG_FILES; do
