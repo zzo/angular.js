@@ -2,7 +2,6 @@
 
 //weoiewi
 //weoiewi
-//weoiewi
 var angularFiles = require('./angularFiles');
 var sharedConfig = require('./karma-shared.conf');
 
